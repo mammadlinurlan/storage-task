@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// .navbaar{
+//     height: 60px;
+//     background-color: black;
+//     position: sticky;
+//     top: 0%;
+   
+// }
+// .fa-shopping-cart{
+// transition: .3s;
+// }
+
+
+// .fa-shopping-cart:hover{
+    
+// }
+
+
+
+.cardcount{
+    margin-left: 5px;
+    color: white;
+}
+
+.sidebar{
+    width: 300px;
+    height: 0;
+    background-color: rgb(233, 233, 233);
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: scroll;
+    box-shadow: 0px 0px 50px 9px rgba(0,0,0,0.6);
+    .barimage{
+        width: 70px;
+        height: 70px;
+       
+        background-color: wheat;
+    }
+    p,h4 {
+        color: black !important;
+    }
+    div {
+        padding: 5px;
+    }
+}

@@ -66,22 +66,27 @@ addbuttons.forEach((btn) => {
             section.append(photo);
             section.append(prodName);
 
-            section.append(prodPrice);
+            section.append(`${prodPrice.innerText}$`);
             section.append(prodCount);
             sidebar.append(section);
+            
         
         } else {
             existedProd.count++;
             const id = existedProd.ID;
             let countElement = document.querySelector(`div[data-id="${id}"] > p.count`);
+            console.log(countElement);
             countElement.innerText = existedProd.count;
         }
 
         localStorage.setItem("basket", JSON.stringify(basket));
+        
 
         totalprice();
         
         counter();
+
+       
     }
 })
 
@@ -111,9 +116,12 @@ function totalprice() {
         total += prod.price * prod.count
         
     })
-    console.log(total);
-    sidebar.append(total)
+    return total; 
+    
 }
+
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
     const items = JSON.parse(localStorage.getItem("basket"));
